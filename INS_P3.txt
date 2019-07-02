@@ -1,0 +1,32 @@
+package javaapplication1;
+
+import java.io.*;
+import java.util.*;
+
+public class JavaApplication1 {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Key");
+        String key="qwertyuiopasdfghjklzxcvbnm";//sc.nextLine();
+        System.out.println("Enter the Message");
+        String msg=sc.nextLine();
+        msg=msg.toLowerCase();
+        String s="";
+        for(int i=0;i<msg.length();i++)
+        {
+            
+            char c=msg.charAt(i);
+            if(c!=' ')
+            {
+            int pos=(int)c-97;
+            char ch=key.charAt(pos);
+            s=s+ch;
+            }
+        }
+        
+        System.out.println("Message after encryption is :"+s);
+        
+        
+    }
+    
+}
