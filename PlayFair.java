@@ -131,6 +131,7 @@ public class PlayFair {
                     char c = key.charAt(i);
 
                     a[j][k] = c;
+                    System.out.print(" "+a[j][k]+" ");
 
                     i++;
 
@@ -148,8 +149,10 @@ public class PlayFair {
 
         }
 
-        j--;
-
+        j=key.length()/5;
+        k=key.length()%5;
+                
+        System.out.println("j="+j+"k="+k);
         for (; j < 5; j++) {
 
             for (; k < 5;) {
@@ -173,21 +176,21 @@ public class PlayFair {
 
         }
 
-//        for(i=0;i<5;i++)
-//
-//        {
-//
-//            for(j=0;j<5;j++)
-//
-//            {
-//
-//                System.out.print(a[i][j]);
-//
-//            }
-//
-//            System.out.println();
-//
-//        }
+        for(i=0;i<5;i++)
+
+        {
+
+            for(j=0;j<5;j++)
+
+            {
+
+                System.out.print(a[i][j]);
+
+            }
+
+            System.out.println();
+
+        }
         text = add_junk(text);
 
         System.out.println("text= " + text);
@@ -199,4 +202,4 @@ public class PlayFair {
         System.out.println("Cipher text = " + cipher);
     }
 
-}
+}          
